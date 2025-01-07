@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roll_dice/text_widget.dart';
 
 // StatelessWidget is the in-built class we are inheriting from
 // ADDS LOGIC AND DATA TO OUR CLASS
@@ -18,17 +19,7 @@ class GradientContainer extends StatelessWidget {
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
       )),
-      child: const Center(
-        child: Text(
-          "Uchenna Ndukwe",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 50,
-              fontFamily: 'Roboto',
-              fontWeight: FontWeight.bold),
-        ),
-      ),
+      child: StyledText(),
     );
   }
 }
