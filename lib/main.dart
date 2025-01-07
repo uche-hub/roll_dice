@@ -10,10 +10,12 @@ void main() {
               Color.fromARGB(255, 227, 171, 5),
               Color.fromARGB(255, 106, 80, 3),
              ],
+             begin: Alignment.topLeft,
+             end: Alignment.bottomRight,
           )
         ),
         child:const Center(
-          child: Text("chima okeke"),
+          child: Text("Uchenna Ndukwe"),
         ),
       ),
     ),
