@@ -15,7 +15,16 @@ void main() {
           )
         ),
         child:const Center(
-          child: Text("Uchenna Ndukwe"),
+          child: Text(
+            "Uchenna Ndukwe",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 50,
+              fontFamily: 'Roboto',
+              fontWeight: FontWeight.bold
+            ),
+          ),
         ),
       ),
     ),
