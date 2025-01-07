@@ -3,7 +3,20 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
-      body: Container(
+      body: GradientContainer(),
+    ),
+  )); // MaterialApp() Create a "widget"
+}
+
+// StatelessWidget is the in-built class we are inheriting from
+// ADDS LOGIC AND DATA TO OUR CLASS
+class  GradientContainer extends StatelessWidget {
+
+  // overriding a method expected by StatelessWidget
+  @override
+  Widget build(context) {
+    // TODO: implement build
+    return Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [ 
@@ -26,7 +39,6 @@ void main() {
             ),
           ),
         ),
-      ),
-    ),
-  )); // MaterialApp() Create a "widget"
+      );
+  }
 }
