@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:roll_dice/text_widget.dart';
 
 // StatelessWidget is the in-built class we are inheriting from
 // ADDS LOGIC AND DATA TO OUR CLASS
@@ -23,7 +22,12 @@ class GradientContainer extends StatelessWidget {
         begin: topLeft,
         end: bottomRight,
       )),
-      child: StyledText(),
+      child: Center(
+        child: Image.asset(
+          "assets/images/dice-1.png",
+          width: 200,
+          )
+        ),
     );
   }
 }
