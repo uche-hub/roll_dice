@@ -9,7 +9,9 @@ var topLeft = Alignment.topLeft;
 var bottomRight = Alignment.bottomLeft;
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer({super.key, required this.colors});
+
+  final List<Color> colors;
 
   // overriding a method expected by StatelessWidget
   @override
@@ -17,10 +19,7 @@ class GradientContainer extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(
-        colors: [
-          Color.fromARGB(255, 227, 171, 5),
-          Color.fromARGB(255, 106, 80, 3),
-        ],
+        colors: colors,
         begin: topLeft,
         end: bottomRight,
       )),
