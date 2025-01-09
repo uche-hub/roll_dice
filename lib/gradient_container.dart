@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roll_dice/dice_roller.dart';
 
 // StatelessWidget is the in-built class we are inheriting from
 // ADDS LOGIC AND DATA TO OUR CLASS
@@ -12,8 +13,6 @@ class GradientContainer extends StatelessWidget {
 
   final List<Color> colors;
 
-  void rollDice() {}
-
   // overriding a method expected by StatelessWidget
   @override
   Widget build(context) {
@@ -25,24 +24,8 @@ class GradientContainer extends StatelessWidget {
         end: bottomRight,
       )),
       child: Center(
-          child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Image.asset(
-            "assets/images/dice-1.png",
-            width: 200,
-          ),
-          TextButton(
-              onPressed: rollDice,
-              style: TextButton.styleFrom(
-                  padding: EdgeInsets.only(
-                    top: 20,
-                  ),
-                  foregroundColor: Colors.white,
-                  textStyle: TextStyle(fontSize: 28)),
-              child: Text("Roll Dice"))
-        ],
-      )),
+        child: DiceRoller(),
+      )
     );
   }
 }
